@@ -4,7 +4,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    scroll-behavior: smooth;
 }
 
 body {
@@ -13,18 +13,151 @@ body {
     font-family: "Varela Round", sans-serif;
 }
 
+/* Nav bar */
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
 nav li {
     color: black;
     display: inline-block;
-    padding: 1rem;
-    margin: 0 2rem;
+    padding: 0.3rem;
+    margin: 0 1rem;
 }
 
 nav a {
+    font-size: 1.5rem;
     color: white;
     text-decoration: none;
 }
 
-.content {
+/* Nav bar animations */
+
+.navbar-ul1 {
+  
+  animation: navbar-ul1 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;  
+}
+
+@keyframes navbar-ul1 {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.navbar-ul2 {
+  animation: navbar-ul2 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
+  animation-delay: 1s; 
+}
+
+@keyframes navbar-ul2 {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.navbar-ul3 {
+  animation: navbar-ul3 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;  
+  animation-delay: 2s; 
+}
+
+@keyframes navbar-ul3 {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* Nav bar underline animation */
+
+.navbar-ul1, .navbar-ul2, .navbar-ul3 {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+.navbar-ul1:before, .navbar-ul2:before, .navbar-ul3:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: chartreuse;
+  height: 4px;
+  transform: translateY(4px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.navbar-ul1:hover:before, .navbar-ul1:focus:before, .navbar-ul1:active:before {
+  transform: translateY(0);
+}
+.navbar-ul2:hover:before, .navbar-ul2:focus:before, .navbar-ul2:active:before {
+  transform: translateY(0);
+}
+
+.navbar-ul3:hover:before, .navbar-ul3:focus:before, .navbar-ul3:active:before {
+  transform: translateY(0);
+}
+
+/* Welcome section */
+
+.intro {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.intro p {
+    line-height: 0rem;
     
 }
+
+.intro-text {
+    margin-top: 3rem;
+}
+
+.hello {
+    font-size: 1.5rem;
+}
+
+.name {
+    font-size: 2.5rem;
+    color: chartreuse;
+}
+
+.job-description {
+    font-size: 1.5rem;
+}
+
+.intro img {
+    width: 10vw;
+    height: auto;
+    border: 0.2px solid black;
+    border-radius: 50%;
+}
+
+/* Projects section */
