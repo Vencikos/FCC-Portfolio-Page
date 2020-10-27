@@ -63,12 +63,10 @@ nav a:visited {
 
 @keyframes navbar-ul1 {
   0% {
-    -webkit-filter: blur(12px);
             filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0px);
             filter: blur(0px);
     opacity: 1;
   }
@@ -76,7 +74,7 @@ nav a:visited {
 
 .navbar-ul2 {
   animation: navbar-ul2 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
-  animation-delay: 1s; 
+  animation-delay: 0.5s; 
 }
 
 @keyframes navbar-ul2 {
@@ -93,7 +91,7 @@ nav a:visited {
 
 .navbar-ul3 {
   animation: navbar-ul3 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;  
-  animation-delay: 2s; 
+  animation-delay: 1s; 
 }
 
 @keyframes navbar-ul3 {
@@ -182,11 +180,46 @@ nav a:visited {
   padding: 1rem 0.5rem;
 }
 
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* About Section */
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #686d76;
+}
+
+
+/* About Me */
+
+
+
+/* Skills */
+
+.skills {
+   padding: 5rem;
+}
+
+.skills-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5rem auto;
+}
+
+.skills img {
+  padding: 0 2rem;
+}
+
 /* Projects section */
 
 .projects {
   padding-top: 10rem;
-  background-color: #1c2b2d;
+  background-color: #686d76;
 }
 
 .projects-grid {
@@ -198,7 +231,7 @@ nav a:visited {
   padding: 10rem;
 }
 
-.projects h2 {
+.projects h2, .skills h2, .about-me h2 {
   display: table;
   margin: 0 50%;
   transform: translateX(-50%);
