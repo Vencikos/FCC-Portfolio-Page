@@ -8,31 +8,54 @@ html {
 }
 
 body {
-    background-color: #646E68;
+    background-image: url("https://images.unsplash.com/photo-1599837565318-67429bde7162?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80");
+    background-repeat: no-repeat;
+    width: auto;
     scroll-behavior: smooth;
     font-family: "Varela Round", sans-serif;
 }
 
 /* Nav bar */
 
+
+
 nav {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
 }
 
 nav li {
-    color: black;
-    display: inline-block;
-    padding: 0.3rem;
-    margin: 0 1rem;
+  color: white;
+  display: inline-block;
+  padding: 0.3rem;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+nav li {
+  color: white;
+  display: inline-block;
+  padding: 0.3rem;
+  margin: 0 1rem;
 }
 
 nav a {
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
+  text-decoration: none;
 }
+
+nav a:visited {
+  color:white;
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+  }
+}
+
 
 /* Nav bar animations */
 
@@ -126,38 +149,103 @@ nav a {
 
 /* Welcome section */
 
+
+
 .intro {
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 20rem;
+    margin-bottom: 30rem;
 }
 
-.intro p {
-    line-height: 0rem;
-    
+.bg-img {
+  width: 100%;
+  height: auto;
 }
 
 .intro-text {
     margin-top: 3rem;
+    color: white;
 }
 
 .hello {
     font-size: 1.5rem;
+    padding: 0.5rem;
 }
 
 .name {
     font-size: 2.5rem;
     color: chartreuse;
+    padding: 0.5rem;
 }
 
 .job-description {
     font-size: 1.5rem;
-}
-
-.intro img {
-    width: 10vw;
-    height: auto;
-    border: 0.2px solid black;
-    border-radius: 50%;
+    padding: .5rem;
 }
 
 /* Projects section */
+
+.projects {
+  background-color: #1c2b2d;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding: 3rem;
+}
+
+.projects h2 {
+  display: block;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 5rem;
+  border-bottom: 5px solid chartreuse;
+}
+
+.project-FCC1, .project-FCC2, .project-FCC3, .project-FCC4 {
+  color: white;
+  background-color: #1f6f8b;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;}
+
+
+
+.projects-img {
+  z-index: 0;
+  width: 100%;
+  height: auto;
+}
+
+.project-FCC1 > a, .project-FCC2 > a, .project-FCC3 > a, .project-FCC4 > a {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.projects a:visited, .projects a:active, .projects a:link {
+  text-decoration: none;
+}
+
+.project-FCC1:hover, .project-FCC2:hover, .project-FCC3:hover, .project-FCC4:hover {
+  transform: scale(1.05);
+}
+
+.projects p {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
