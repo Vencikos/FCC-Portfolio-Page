@@ -9,6 +9,18 @@ html {
     overflow-x:hidden;
 }
 
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 65%;
+  }
+}
+
 body {
     background-image: url("https://images.unsplash.com/photo-1599837565318-67429bde7162?ixlib%3Drb-1.2.1%26auto%3Dformat%26fit%3Dcrop%26w%3D1534%26q%3D80");
     background-repeat: no-repeat;
@@ -19,10 +31,6 @@ body {
 }
 
 /* Nav bar */
-
-#welcome-section {
-  height: 100vh;
-}
 
 .navbar {
   position: fixed;
@@ -145,7 +153,7 @@ nav a:visited {
   left: 0;
   right: 0;
   bottom: 0;
-  background: chartreuse;
+  background: white;
   height: 4px;
   transform: translateY(4px);
   transition-property: transform;
@@ -205,6 +213,13 @@ nav a:visited {
   padding: 1rem 0.5rem;
 }
 
+@media screen and (max-width: 500px) {
+  .social-icons img {
+    width: 10%;
+    height: auto;
+  }
+}
+
 .social-icons img:hover {
   transform: scale(1.2);
 }
@@ -227,24 +242,21 @@ nav a:visited {
   }
 }
 
-.about-me {
+.about-me, .skills {
   flex: 1;
   justify-content: center;
   text-align: center;
   height: 12rem;
-  margin: 10rem 4rem 10rem 4rem;
+  margin: 10rem 2rem 10rem 2rem;
   padding: 2rem;
   border:1px solid white;
 }
 
-.skills {
- flex: 1;
- justify-content: center;
- text-align: center;
- height: 12rem;
- margin: 10rem 1rem 10rem 1rem;
- padding: 2rem;
- border:1px solid white;
+@media screen and (max-width: 1000px) {
+  .about-me, .skills {
+    margin: 5rem 2rem 0 2rem;
+    border: none;
+  }
 }
 
 .about-me h2 {
@@ -283,23 +295,37 @@ nav a:visited {
 
 .projects {
   background-color: #686d76;
+  padding-top: 10rem;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  width: 60%;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   column-gap: 4rem;
   row-gap: 4rem;
   padding: 5rem;
+  margin: auto;
 }
 
-@media screen and (max-width: 900px) {
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr;
+@media screen and (max-width: 1300px) {
+  .projects-grid {
+    width: 80%;
+    padding: 3rem;
+  } 
 }
 
-.projects h2 {
+@media screen and (max-width: 1005px) {
+  .projects-grid {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 80%;
+    padding: 3rem;
+  } 
+}
+
+.projects-header {
   color: white;
   display: inline;
   margin: 3rem 50%;
@@ -343,12 +369,97 @@ nav a:visited {
 /* Contact section */
 
 .contact {
-  
+  display: flex;
+  flex-direction: column;
+  margin: 15rem auto;
+  width: 30rem;
   
 }
 
+.contact-header {
+  color: white;
+  margin: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
 
+input, textarea, button {
+  margin: 1rem 50%;
+  transform: translateX(-50%);
+  width: 20rem;
+}
 
+.input-field {
+  color: white;
+  background-color: #686d76;
+  font-family: "Varela Round", sans-serif;
+  height: 1.5rem;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.input-field:focus {
+  outline: none;
+  border-bottom: 1px solid chartreuse;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #686d76 inset;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 0.6em;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0.6em 1em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 700;
+}
+
+.btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  &:hover {
+    box-shadow: 0 0 40px 40px red inset;
+  }
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #020202;
+  font-size: 0.5rem;
+  height: 5rem;
+}
+
+.footer p {
+  font-size: 1rem;
+}
 
 
 
