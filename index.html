@@ -15,12 +15,13 @@
     <!-- Header -->
 
       <header>
-          <div id="navbar">
+          <div id="navbar" class="navbar">
               <nav>
                   <ul>
-                      <li class="navbar-ul1"><a href="#">About</a></li>
-                      <li class="navbar-ul2"><a href="#projects">Projects</a></li>
-                      <li class="navbar-ul3"><a href="#contact">Contact</a></li>
+                      <li class="navbar-ul1"><a href="#">Home</a></li>
+                      <li class="navbar-ul2"><a href="#about">About</a></li>
+                      <li class="navbar-ul3"><a href="#projects">Projects</a></li>
+                      <li class="navbar-ul4"><a href="#contact">Contact</a></li>
                   </ul>
               </nav>
           </div>
@@ -34,9 +35,10 @@
             <h1 class="name">Vencislav</h1>
             <p class="job-description">Freelance Front-End Developer</p>
           </div>  
+
           <div class="social-icons">
             <a href="https://www.facebook.com/venkostadinov/" target="_blank"><img src="Images\Social\Facebook_icon-icons.com_66567.png" alt="Facebook Icon"></a>
-            <a href="https://github.com/Vencikos" target="_blank"><img src="Images\Social\Git_icon-icons.com_66557.png" alt="Github Icon"></a>
+            <a href="https://github.com/Vencikos" target="_blank" id="profile-link"><img src="Images\Social\Git_icon-icons.com_66557.png" alt="Github Icon"></a>
             <a href="https://www.linkedin.com/in/vencislav-kostadinov-a4b0211b4/" target="_blank"><img src="Images\Social\Linckedin_icon-icons.com_66562.png" alt="LinkedIn Icon"></a>
             <a href="https://twitter.com/Ven_Kostadinov" target="_blank"><img src="Images\Social\Twitter_icon-icons.com_66566.png" alt="Twitter Icon"></a>
           </div> 
@@ -44,10 +46,10 @@
     
     <!-- About me/Skills Section --> 
 
-      <div class="about">
+      <div class="about" id="about">
         <div class="about-me">
             <h2>About me</h2>
-            <p>Hi, I'm Vencislav.From early age I had interest in technology and computers.The world of web developement is new to me but i'm eager to learn and improve my skills.</p>
+            <p>Hi, I'm Vencislav. From early age I had interest in technology and computers. The world of web developement is new to me but i'm eager to learn and improve my skills.</p>
         </div>
   
         <div class="skills">
@@ -66,28 +68,28 @@
         <div class="projects-grid">
 
           <a href="https://vencikos.github.io/FCC-Tribute-Page/" alt="Tribute Page" target="_blank">
-            <div class="project-FCC1">
+            <div class="project-tile1">
               <img class="projects-img" src="Images\Tribute Page.png" alt="Free Code Camp Tribute Page">
               <p>Tribute page</p>
             </div>
           </a> 
           
           <a href="https://vencikos.github.io/FCC-Survey-Form/" alt="Survey Form" target="_blank">
-            <div class="project-FCC2">
+            <div class="project-tile2">
               <img class="projects-img" src="Images/Survey Form 1.png" alt="Free Code Camp Survey Form">
               <p>Survey Form</p>
             </div>
           </a>
           
           <a href="https://vencikos.github.io/FCC-Product-Landing-Page/" alt="Product Landing Page" target="_blank">
-            <div class="project-FCC3">
+            <div class="project-tile3">
               <img class="projects-img" src="Images/Product Landing Page.png" alt="Free Code Camp Product Landing Page">
               <p>Product Landing Page</p>
             </div>
           </a>
           
           <a href="https://vencikos.github.io/FCC-Technical-Documentation-Page/" alt="Technical Documentation Page" target="_blank">
-            <div class="project-FCC4">
+            <div class="project-tile4">
               <img class="projects-img" src="Images/Technical Documentation Page.png" alt="Free Code Camp Technical Documentation Page">
               <p>Technical Documentation Page</p>
             </div>
@@ -96,8 +98,25 @@
 
     <!-- Contact Form -->
 
-        <div>
-
+        <div class="contact">
+          <h2>Get In Touch</h2>
+          <form action="">
+            <div>
+              <p>Name</p>
+              <input type="text" required>
+            </div>
+            <div>
+              <p>E-mail</p>
+              <input type="email" required>
+            </div>
+            <div>
+              <p>Message</p>
+              <Textarea cols="20" rows="10"></Textarea>
+            </div>
+            <div>
+              <button type="submit">Send</button>
+            </div>
+          </form>
         </div>
         
         
