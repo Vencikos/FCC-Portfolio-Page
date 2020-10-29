@@ -410,6 +410,7 @@ input, textarea, button {
 }
 
 input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #686d76 inset;
   -webkit-box-shadow: 0 0 0px 1000px #686d76 inset;
   -webkit-text-fill-color: rgb(255, 255, 255);
 }
@@ -440,12 +441,6 @@ input:-webkit-autofill {
   background-color: white;
 }
 
-.first {
-  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  &:hover {
-    box-shadow: 0 0 40px 40px red inset;
-  }
-}
 
 /* Footer */
 .footer {
