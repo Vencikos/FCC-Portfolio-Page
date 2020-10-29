@@ -15,9 +15,15 @@ html {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   html {
     font-size: 65%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
   }
 }
 
@@ -228,8 +234,8 @@ nav a:visited {
 
 .about {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   background-color: #686d76;
   color: white;
 }
@@ -238,31 +244,24 @@ nav a:visited {
   .about {
     display: flex;
     flex-direction: column;
-
+    
   }
 }
 
 .about-me, .skills {
-  flex: 1;
   justify-content: center;
   text-align: center;
-  height: 12rem;
-  margin: 10rem 2rem 10rem 2rem;
+  width: 30rem;
+  margin: 10rem auto 0 auto;
   padding: 2rem;
   border:1px solid white;
-}
-
-@media screen and (max-width: 1000px) {
-  .about-me, .skills {
-    margin: 5rem 2rem 0 2rem;
-    border: none;
-  }
+  border-radius: 1.5rem;
 }
 
 .about-me h2 {
   display: inline;
   font-size: 2.5rem;
-  border-bottom: 5px solid chartreuse;
+  border-bottom: 1px solid white;
 }
 
 .about-me p {
@@ -278,7 +277,7 @@ nav a:visited {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 3rem auto;
+  margin: 3rem auto 1rem auto;
 }
 
 .skills img {
@@ -288,7 +287,7 @@ nav a:visited {
 .skills h2 {
   display: inline;
   font-size: 2.5rem;
-  border-bottom: 5px solid chartreuse;
+  border-bottom: 1px solid white;
 }
 
 /* Projects section */
@@ -327,14 +326,14 @@ nav a:visited {
 
 .projects-header {
   color: white;
-  display: inline;
-  margin: 3rem 50%;
-  transform: translateX(-50%);
+  display: table;
+  margin: 0 auto;
+  text-align: center;
   font-size: 2.5rem;
-  border-bottom: 5px solid chartreuse;
+  border-bottom: 1px solid white;
 }
 
-.project-tile1, .project-tile2, .project-tile3, .project-tile4 {
+.project-tile {
   color: white;
   background-color: #1f6f8b;
 }
@@ -345,7 +344,7 @@ nav a:visited {
   height: auto;
 }
 
-.project-tile1 > a, .project-tile2 > a, .project-tile3 > a, .project-tile4 > a {
+.project-tile > a {
   text-align: center;
   font-size: 1.5rem;
   padding: 0.5rem;
@@ -356,7 +355,7 @@ nav a:visited {
   text-decoration: none;
 }
 
-.project-tile1:hover, .project-tile2:hover, .project-tile3:hover, .project-tile4:hover {
+.project-tile:hover {
   transform: scale(1.05);
 }
 
@@ -372,8 +371,10 @@ nav a:visited {
   display: flex;
   flex-direction: column;
   margin: 15rem auto;
+  padding-bottom: 1.5rem;
   width: 30rem;
-  
+  border: 1px solid white;
+  border-radius: 1rem;
 }
 
 .contact-header {
